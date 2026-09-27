@@ -1,0 +1,95 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+  background: #f4f6f5;
+  color: #24302a;
+}
+.app-shell {
+  min-height: 100vh;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.page-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.page-sub {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #6f7d72;
+  line-height: 1.6;
+}
+.flower-bar {
+  padding: 10px 12px;
+  border: 1px solid #e6ecf1;
+  border-radius: 10px;
+  background: #fff;
+}
+.flower-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.flower-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+.flower-range {
+  font-size: 12px;
+  color: #7f8d82;
+}
+.overlap-list {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  font-size: 12px;
+  color: #a4341f;
+  line-height: 1.7;
+}
+.no-overlap {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #2f7a4d;
+}
+.conflict-row {
+  background: #fff1f0;
+}
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@media print {
+  .ant-layout-sider,
+  .ant-layout-header,
+  .page-head .ant-space,
+  .ant-card-extra {
+    display: none !important;
+  }
+  .ant-layout-content {
+    padding: 0 !important;
+  }
+  .print-landscape,
+  .print-portrait {
+    width: 100%;
+  }
+  .ant-table {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,14 @@
+# 顶层项目名兜底：避免中文目录名导致 compose 项目名为空
+name: gbbeeroute
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: ${COMPOSE_PROJECT_NAME:-gbbeeroute}-frontend
+    image: ${COMPOSE_PROJECT_NAME:-gbbeeroute}-frontend:latest
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_PORT:-21817}:80"
+    environment:
+      - TZ=Asia/Shanghai
+    # 纯前端应用：数据只保存在浏览器本地（IndexedDB），无数据库服务、不挂载命名卷
